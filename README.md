@@ -42,7 +42,7 @@ Inspired by Marvel's legendary AI assistant, Jarvis, this project brings an inte
      ```bash
      ollama create iio -f ./Modelfile
      ```
-4.Donwload and Install - https://www.nirsoft.net/utils/nircmd-x64.zip - For Executing Commands.
+ 4.Donwload and Install - https://www.nirsoft.net/utils/nircmd-x64.zip - For Executing Commands.
 
 5. **Run Jarvis**:
    ```bash
