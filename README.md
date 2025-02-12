@@ -67,7 +67,7 @@ Inspired by Marvel's legendary AI assistant, Jarvis, this project brings an inte
 
 📬 For any inquiries, please reach out via the contact form in the application.
 
-📂 Portfolio: Your Portfolio🔗 LinkedIn: Your LinkedIn
+📂 Portfolio: (https://saiposhith-r.pages.dev/)🔗 LinkedIn: linkedin.com/in/saiposhith-ai
 
 
 ---
