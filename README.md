@@ -64,9 +64,11 @@ Inspired by Marvel's legendary AI assistant, Jarvis, this project brings an inte
 📜 This project is licensed under the **MIT License**.
 
 ## Contact
+
 📬 For any inquiries, please reach out via the contact form in the application.
 
-![Contact](https://your-image-url.com/contact-form.png)
+📂 Portfolio: Your Portfolio🔗 LinkedIn: Your LinkedIn
+
 
 ---
 _Experience next-level system control with Jarvis, your personal AI assistant!_ ✨
