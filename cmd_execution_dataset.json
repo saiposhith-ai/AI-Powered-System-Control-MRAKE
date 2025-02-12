@@ -1,0 +1,478 @@
+[
+    {
+        "instruction": "Open the door of CD-ROM drive",
+        "input": "open CD-ROM drive",
+        "output": "nircmd.exe cdrom open {path}"
+    },
+    {
+        "instruction": "Close the door of CD-ROM drive",
+        "input": "close CD-ROM drive",
+        "output": "nircmd.exe cdrom close {path}"
+    },
+    {
+        "instruction": "Speak the text currently in clipboard",
+        "input": "speak clipboard",
+        "output": "nircmd.exe speak text ~$clipboard$"
+    },
+    {
+        "instruction": "Speak the text from a file",
+        "input": "speak file",
+        "output": "nircmd.exe speak file \"{path}\" 0 100 \"{path}\" 48kHz16BitStereo"
+    },
+    {
+        "instruction": "Increase system volume by 2000 units",
+        "input": "increase volume",
+        "output": "nircmd.exe changesysvolume 2000"
+    },
+    {
+        "instruction": "Decrease system volume by 5000 units",
+        "input": "decrease volume",
+        "output": "nircmd.exe changesysvolume -5000"
+    },
+    {
+        "instruction": "Set the system volume to the highest value",
+        "input": "set max volume",
+        "output": "nircmd.exe setsysvolume 65535"
+    },
+    {
+        "instruction": "Mute the system volume",
+        "input": "mute volume",
+        "output": "nircmd.exe mutesysvolume 1"
+    },
+    {
+        "instruction": "Unmute the system volume",
+        "input": "unmute volume",
+        "output": "nircmd.exe mutesysvolume 0"
+    },
+    {
+        "instruction": "Switch system volume between mute and normal state",
+        "input": "toggle mute",
+        "output": "nircmd.exe mutesysvolume 2"
+    },
+    {
+        "instruction": "Create a shortcut to switch volume mute state",
+        "input": "create volume mute toggle shortcut",
+        "output": "nircmd.exe cmdshortcut \"{path}\" \"Switch Volume\" mutesysvolume 2"
+    },
+    {
+        "instruction": "Turn off the monitor",
+        "input": "turn off monitor",
+        "output": "nircmd.exe monitor off"
+    },
+    {
+        "instruction": "Start the default screensaver",
+        "input": "start screensaver",
+        "output": "nircmd.exe screensaver"
+    },
+    {
+        "instruction": "Put the computer in standby mode",
+        "input": "standby",
+        "output": "nircmd.exe standby"
+    },
+    {
+        "instruction": "Log off the current user",
+        "input": "log off user",
+        "output": "nircmd.exe exitwin logoff"
+    },
+    {
+        "instruction": "Ask if you want to reboot, and reboot if 'Yes'",
+        "input": "ask to reboot",
+        "output": "nircmd.exe qboxcom \"Do you want to reboot ?\" \"question\" exitwin reboot"
+    },
+    {
+        "instruction": "Turn off the computer",
+        "input": "shutdown computer",
+        "output": "nircmd.exe exitwin poweroff"
+    },
+    {
+        "instruction": "Turn off all computers in computers.txt",
+        "input": "shutdown all computers",
+        "output": "multiremote copy \"{path}\" exitwin poweroff force"
+    },
+    {
+        "instruction": "Dial 'My Internet' connection",
+        "input": "dial internet",
+        "output": "nircmd.exe rasdial \"My Internet\""
+    },
+    {
+        "instruction": "Disconnect 'My Internet' connection",
+        "input": "disconnect internet",
+        "output": "nircmd.exe rashangup \"My Internet\""
+    },
+    {
+        "instruction": "Make Internet Explorer windows 75% transparent",
+        "input": "make internet explorer transparent",
+        "output": "nircmd.exe win trans ititle \"internet explorer\" 192"
+    },
+    {
+        "instruction": "Minimize all Internet Explorer windows",
+        "input": "minimize internet explorer windows",
+        "output": "nircmd.exe win min class \"IEFrame\""
+    },
+    {
+        "instruction": "Close all Internet Explorer windows",
+        "input": "close internet explorer windows",
+        "output": "nircmd.exe win close class \"IEFrame\""
+    },
+    {
+        "instruction": "Close all File Explorer windows",
+        "input": "close file explorer windows",
+        "output": "nircmd.exe win close class \"CabinetWClass\""
+    },
+    {
+        "instruction": "Hide all Internet Explorer windows",
+        "input": "hide internet explorer windows",
+        "output": "nircmd.exe win hide class \"IEFrame\""
+    },
+    {
+        "instruction": "Show all Internet Explorer windows",
+        "input": "show internet explorer windows",
+        "output": "nircmd.exe win show class \"IEFrame\""
+    },
+    {
+        "instruction": "Center all top windows",
+        "input": "center all top windows",
+        "output": "nircmd.exe win center alltop"
+    },
+    {
+        "instruction": "Set window style of 'My Computer'",
+        "input": "set 'my computer' window style",
+        "output": "nircmd.exe win -style title \"my computer\" 0x00C00000"
+    },
+    {
+        "instruction": "Toggle window style of 'My Computer'",
+        "input": "toggle 'my computer' window style",
+        "output": "nircmd.exe win +style title \"my computer\" 0x00C00000"
+    },
+    {
+        "instruction": "Create shortcut to close all Internet Explorer windows",
+        "input": "create shortcut to close IE",
+        "output": "nircmd.exe cmdshortcut \"{path}\" \"Close All IE\" win close class \"IEFrame\""
+    },
+    {
+        "instruction": "Create shortcut to hide all Internet Explorer windows",
+        "input": "create shortcut to hide IE",
+        "output": "nircmd.exe cmdshortcut \"{path}\" \"Hide All IE\" win hide class \"IEFrame\""
+    },
+    {
+        "instruction": "Create shortcut to show all Internet Explorer windows",
+        "input": "create shortcut to show IE",
+        "output": "nircmd.exe cmdshortcut \"{path}\" \"Show All IE\" win show class \"IEFrame\""
+    },
+    {
+        "instruction": "Set 'Calculator' window as topmost",
+        "input": "set calculator as topmost",
+        "output": "nircmd.exe win settopmost title \"Calculator\" 1"
+    },
+    {
+        "instruction": "Remove 'Calculator' window from topmost",
+        "input": "remove calculator from topmost",
+        "output": "nircmd.exe win settopmost title \"Calculator\" 0"
+    },
+    {
+        "instruction": "Create shortcut to open CD-ROM",
+        "input": "create shortcut to open CD-ROM",
+        "output": "nircmd.exe cmdshortcut \"{path}\" \"Open CDROM\" cdrom open {path}"
+    },
+    {
+        "instruction": "Create a URL shortcut to NirSoft",
+        "input": "create NirSoft URL shortcut",
+        "output": "nircmd.exe urlshortcut \"http://www.nirsoft.net\" \"{path}\" \"NirSoft\""
+    },
+    {
+        "instruction": "Create a URL shortcut to NirSoft with multiple remotes",
+        "input": "create NirSoft URL shortcut with remote",
+        "output": "nircmd.exe multiremote copy \"{path}\" urlshortcut \"http://www.nirsoft.net\" \"{path}\" \"NirSoft\""
+    },
+    {
+        "instruction": "Set the display resolution to 800x600",
+        "input": "set display resolution",
+        "output": "nircmd.exe setdisplay 800 600 24"
+    },
+    {
+        "instruction": "Create shortcut to set display resolution",
+        "input": "create display resolution shortcut",
+        "output": "nircmd.exe cmdshortcut \"{path}\" \"800x600x24\" setdisplay 800 600 24"
+    },
+    {
+        "instruction": "Copy a file to the specified path",
+        "input": "copy file",
+        "output": "nircmd.exe execmd copy \"{path}\" {path}"
+    },
+    {
+        "instruction": "Restart Apache service",
+        "input": "restart Apache",
+        "output": "nircmd.exe service restart apache"
+    },
+    {
+        "instruction": "Create shortcut to restart Apache service",
+        "input": "create Apache restart shortcut",
+        "output": "nircmd.exe cmdshortcut \"{path}\" \"Restart Apache\" service restart apache"
+    },
+    {
+        "instruction": "Restart MySQL service",
+        "input": "restart MySQL",
+        "output": "nircmd.exe service restart MySql"
+    },
+    {
+        "instruction": "Open registry editor",
+        "input": "open registry editor",
+        "output": "nircmd.exe regedit \"{path}\""
+    },
+    {
+        "instruction": "Change registry value for ScreenSaveActive",
+        "input": "change ScreenSaveActive registry value",
+        "output": "nircmd.exe regsetval sz \"HKCU\\control panel\\desktop\" \"ScreenSaveActive\" 0"
+    },
+    {
+        "instruction": "Change file time",
+        "input": "change file time",
+        "output": "nircmd.exe setfiletime \"{path}\" \"24-06-2003 17:57:11\" \"22-11-2005 10:21:56\""
+    },
+    {
+        "instruction": "Set clipboard with a file",
+        "input": "set clipboard with file",
+        "output": "nircmd.exe clipboard set {path}"
+    },
+    {
+        "instruction": "Read clipboard from file",
+        "input": "read clipboard from file",
+        "output": "nircmd.exe clipboard readfile \"{path}\""
+    },
+    {
+        "instruction": "Add file to clipboard",
+        "input": "add file to clipboard",
+        "output": "nircmd.exe clipboard addfile \"{path}\""
+    },
+    {
+        "instruction": "Clear the clipboard",
+        "input": "clear clipboard",
+        "output": "nircmd.exe clipboard clear"
+    },
+    {
+        "instruction": "Create a folder from parameter file",
+        "input": "create folder from parameter file",
+        "output": "nircmd.exe paramsfile \"{path}\" \"\" \"\" execmd md {path}"
+    },
+    {
+        "instruction": "Install assembly from path",
+        "input": "install assembly",
+        "output": "nircmd.exe gac install \"{path}\""
+    },
+    {
+        "instruction": "Empty the Recycle Bin",
+        "input": "empty Recycle Bin",
+        "output": "nircmd.exe emptybin"
+    },
+    {
+        "instruction": "Click 'Yes' in dialog box",
+        "input": "click yes in dialog",
+        "output": "nircmd.exe dlg \"\" \"\" click yes"
+    },
+    {
+        "instruction": "Take a screenshot and save it",
+        "input": "take screenshot",
+        "output": "nircmd.exe cmdwait 2000 savescreenshot \"{path}\""
+    },
+    {
+        "instruction": "Save multiple screenshots in loop",
+        "input": "save screenshots in loop",
+        "output": "nircmd.exe loop 10 60000 savescreenshot \"{path}\""
+    },
+    {
+        "instruction": "Wait for Firefox to close",
+        "input": "wait for Firefox to close",
+        "output": "nircmd.exe waitprocess firefox.exe speak text \"Firefox was closed\""
+    },
+    {
+        "instruction": "Elevate command to run as system",
+        "input": "elevate command",
+        "output": "nircmd.exe elevatecmd runassystem {path}"
+    },
+    {
+        "instruction": "Lock the computer",
+        "input": "lock computer",
+        "output": "nircmd.exe lockws"
+    },
+    {
+        "instruction": "Enable screensaver",
+        "input": "enable screensaver",
+        "output": "nircmd.exe screensaver"
+    },
+    {
+        "instruction": "Change screen brightness to 50%",
+        "input": "set screen brightness to 50",
+        "output": "nircmd.exe setbrightness 50"
+    },
+    {
+        "instruction": "Take a screenshot of the active window",
+        "input": "screenshot active window",
+        "output": "nircmd.exe savescreenshot {path} active"
+    },
+    {
+        "instruction": "Mute microphone",
+        "input": "mute microphone",
+        "output": "nircmd.exe mutesysvolume 1 mic"
+    },
+    {
+        "instruction": "Unmute microphone",
+        "input": "unmute microphone",
+        "output": "nircmd.exe mutesysvolume 0 mic"
+    },
+    {
+        "instruction": "Change screen resolution to 1920x1080",
+        "input": "set screen resolution 1920x1080",
+        "output": "nircmd.exe setdisplay 1920 1080 32"
+    },
+    {
+        "instruction": "Disable WiFi",
+        "input": "disable wifi",
+        "output": "nircmd.exe exec show window \"ncpa.cpl\""
+    },
+    {
+        "instruction": "Enable WiFi",
+        "input": "enable wifi",
+        "output": "nircmd.exe exec show window \"ncpa.cpl\""
+    },
+    {
+        "instruction": "Open Calculator",
+        "input": "open calculator",
+        "output": "subprocess.Popen(['calc.exe'])"
+    },
+    {
+        "instruction": "Open Command Prompt",
+        "input": "open command prompt",
+        "output": "subprocess.Popen(['cmd.exe'])"
+    },
+    {
+        "instruction": "Open Task Manager",
+        "input": "open task manager",
+        "output": "subprocess.Popen(['taskmgr.exe'])"
+    },
+    {
+        "instruction": "Open File Explorer",
+        "input": "open file explorer",
+        "output": "subprocess.Popen(['explorer'])"
+    },
+    {
+        "instruction": "Open Control Panel",
+        "input": "open control panel",
+        "output": "subprocess.Popen(['control.exe'])"
+    },
+    {
+        "instruction": "Shut down the computer after 30 seconds",
+        "input": "shutdown computer after 30 seconds",
+        "output": "nircmd.exe exitwin poweroff 30"
+    },
+    {
+        "instruction": "Restart the computer after 10 seconds",
+        "input": "restart computer after 10 seconds",
+        "output": "nircmd.exe exitwin reboot 10"
+    },
+    {
+        "instruction": "Open Microsoft Word",
+        "input": "open microsoft word",
+        "output": "subprocess.Popen(['winword.exe'])"
+    },
+    {
+        "instruction": "Open Microsoft Excel",
+        "input": "open microsoft excel",
+        "output": "subprocess.Popen(['excel.exe'])"
+    },
+    {
+        "instruction": "Open Microsoft PowerPoint",
+        "input": "open microsoft powerpoint",
+        "output": "subprocess.Popen(['powerpnt.exe'])"
+    },
+    {
+        "instruction": "Open Notepad",
+        "input": "open notepad",
+        "output": "subprocess.Popen(['notepad.exe'])"
+    },
+    {
+        "instruction": "Open browser and navigate to Google",
+        "input": "open browser Google",
+        "output": "subprocess.Popen(['start', 'https://www.google.com'])"
+    },
+    {
+        "instruction": "Play/pause media",
+        "input": "play/pause media",
+        "output": "nircmd.exe mediaplaypause"
+    },
+    {
+        "instruction": "Mute all media sound",
+        "input": "mute media",
+        "output": "nircmd.exe mediaplaypause"
+    },
+    {
+        "instruction": "Increase media volume by 5000 units",
+        "input": "increase media volume",
+        "output": "nircmd.exe changesysvolume 5000"
+    },
+    {
+        "instruction": "Decrease media volume by 5000 units",
+        "input": "decrease media volume",
+        "output": "nircmd.exe changesysvolume -5000"
+    },
+    {
+        "instruction": "Set media volume to the highest value",
+        "input": "set media volume to max",
+        "output": "nircmd.exe setsysvolume 65535"
+    },
+    {
+        "instruction": "Open Git Bash",
+        "input": "open git bash",
+        "output": "subprocess.Popen(['bash.exe'])"
+    },
+    {
+        "instruction": "Hide all windows",
+        "input": "hide all windows",
+        "output": "nircmd.exe win hide all"
+    },
+    {
+        "instruction": "Show all windows",
+        "input": "show all windows",
+        "output": "nircmd.exe win show all"
+    },
+    {
+        "instruction": "Minimize all windows",
+        "input": "minimize all windows",
+        "output": "nircmd.exe win min all"
+    },
+    {
+        "instruction": "Close all open windows",
+        "input": "close all windows",
+        "output": "nircmd.exe win close all"
+    },
+    {
+        "instruction": "Close all background processes",
+        "input": "close all background processes",
+        "output": "nircmd.exe win close class \"*\""
+    },
+    {
+        "instruction": "Open a specific URL in the browser",
+        "input": "open specific URL",
+        "output": "subprocess.Popen(['start', 'https://www.example.com'])"
+    },
+    {
+        "instruction": "Clear browser history",
+        "input": "clear browser history",
+        "output": "nircmd.exe exec show window \"chrome://settings/clearBrowserData\""
+    },
+    {
+        "instruction": "Restart the computer",
+        "input": "restart computer",
+        "output": "nircmd.exe exitwin reboot"
+    },
+    {
+        "instruction": "Shutdown the computer",
+        "input": "shutdown computer",
+        "output": "nircmd.exe exitwin poweroff"
+    },
+    {
+        "instruction": "Log off the user",
+        "input": "log off user",
+        "output": "nircmd.exe exitwin logoff"
+    }
+]
+

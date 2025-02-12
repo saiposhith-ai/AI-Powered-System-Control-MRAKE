@@ -1,0 +1,12 @@
+opencv-python
+mediapipe
+torch
+numpy
+pandas
+flask
+mysql-connector-python
+ollama
+requests
+pyautogui
+speechrecognition
+pyaudio

@@ -1,0 +1,17 @@
+FROM unsloth.Q5_K_M.gguf
+
+TEMPLATE """Below are some instructions that describe some tasks. Execute the outputs that appropriately complete each request.{{ if .Prompt }}
+
+### Instruction:
+{{ .Prompt }}{{ end }}
+
+### Response:
+{{ .Response }}<|end_of_text|>"""
+
+PARAMETER stop "<|eot_id|>"
+PARAMETER stop "<|start_header_id|>"
+PARAMETER stop "<|end_header_id|>"
+PARAMETER stop "<|end_of_text|>"
+PARAMETER stop "<|reserved_special_token_"
+PARAMETER temperature 1.5
+PARAMETER min_p 0.1
